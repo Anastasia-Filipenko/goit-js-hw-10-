@@ -6,11 +6,11 @@ import 'notiflix/dist/notiflix-3.2.5.min.css';
 
 const DEBOUNCE_DELAY = 300;
 
-form = document.querySelector('#search-box');
+searchForm = document.querySelector('#search-box');
 countryList = document.querySelector('.country-list');
 countryInfo = document.querySelector('.country-info');
 
-form.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
+searchForm.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
 
 function onSearch(e) {
     const name = e.target.value.trim();
